@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/fonts.css';
+@import './styles/tokens.css';
+
+/* app-root non genera un box: header, main e footer restano figli diretti di body,
+   come nel layout originale */
+app-root {
+  display: contents;
+}
