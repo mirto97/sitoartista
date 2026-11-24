@@ -1,0 +1,36 @@
+<p>social-links.component works!</p>
+@if (links.length > 0) {
+  <div class="social-links">
+    <ul>
+      @for (link of links; track link.id) {
+        <li>
+          <a
+            [href]="link.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="strings.t(labelKeys[link.network])"
+          >
+            @switch (link.network) {
+              @case ('facebook') {
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M13.5 21v-7.6h2.6l.4-3H13.5V8.3c0-.9.2-1.5 1.5-1.5h1.6V4.2C16.3 4.1 15.3 4 14.2 4c-2.4 0-4.1 1.5-4.1 4.1v2.3H7.5v3h2.6V21h3.4z"
+                  />
+                </svg>
+              }
+              @case ('instagram') {
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    fill="currentColor"
+                    d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8zm4 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 2a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM17.4 6.8a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                  />
+                </svg>
+              }
+            }
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+}

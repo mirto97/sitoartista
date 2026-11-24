@@ -20,13 +20,24 @@
   --color-focus: var(--color-accent);
 
   /* Muro bianco di "I miei quadri in vendita" (provvisorio fino ad approvazione).
-     Contrasto cartellino-testo su cartellino-prezzo: circa 11:1 */
+     Contrasto price-tag-text su price-tag-bg: circa 11:1 */
+  --wall: #f6f2ec;
+  --wall-shadow: #e3dbd0;
+  --baseboard: #ece5da;
+  --floor: #8a5f3f;
+  --price-tag-bg: #f2c744;
+  --price-tag-text: #2b1b12;
+
+  /* Muro bianco di "I miei quadri in vendita" (provvisorio fino ad approvazione).
+  Contrasto cartellino-testo su cartellino-prezzo: circa 11:1 */
+  /* versione con nomi in ita come l'originale di cipro
   --muro: #f6f2ec;
   --muro-ombra: #e3dbd0;
   --battiscopa: #ece5da;
   --pavimento: #8a5f3f;
   --cartellino-prezzo: #f2c744;
   --cartellino-testo: #2b1b12;
+  */
 
   /* Scala delle spaziature */
   --space-1: 0.25rem;

@@ -1,0 +1,26 @@
+<nav class="site-nav" [class.site-nav--force-collapsed]="forceCollapsed()" aria-label="Principale">
+  <button
+    type="button"
+    class="nav-toggle"
+    aria-controls="nav-list"
+    [attr.aria-expanded]="isOpen()"
+    (click)="toggle()"
+  >
+    {{ strings.t(isOpen() ? 'nav.menu_close' : 'nav.menu_open') }}
+  </button>
+  <ul id="nav-list" class="nav-list" [class.nav-list--open]="isOpen()">
+    @for (item of items; track item.path) {
+      <li>
+        <a
+          [routerLink]="item.path"
+          routerLinkActive
+          ariaCurrentWhenActive="page"
+          [routerLinkActiveOptions]="exactMatch"
+          (click)="close()"
+        >
+          {{ strings.t(item.labelKey) }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>
